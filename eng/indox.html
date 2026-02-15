@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظومة تنزيل المواد كلية الهندسة مصراتة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen" class="login-card">
+        <div class="header-section">
+            <img src="engineer_girl.png.png" alt="مهندسة" class="char-img">
+            <div class="title-container">
+                <h1>منظومة تنزيل المواد</h1>
+                <h2>كلية الهندسة مصراتة</h2>
+            </div>
+            <img src="engineer_boy.png.png" alt="مهندس" class="char-img">
+        </div>
+
+        <div class="form-container">
+            <input type="text" id="student-id" placeholder="رقم القيد  ">
+            <input type="password" id="password" placeholder="كلمة السر ">
+            
+            <select id="department">
+                <option value="" disabled selected>اختر القسم</option>
+                <option value="civil">الهندسة المدنية</option>
+                <option value="ai">هندسة الذكاء الاصطناعي</option>
+            </select>
+
+            <button onclick="login()" class="login-btn">تسجيل الدخول</button>
+        </div>
+        <p id="msg"></p>
+    </div>
+
+    <div id="dashboard" class="dashboard-card" style="display: none;">
+        <div class="dash-header">
+            <h2 id="welcome-text">مرحباً يا مهندس</h2>
+            <p id="student-info"></p>
+        </div>
+        
+        <div class="courses-section">
+            <h3>📚 المواد المتاحة لك للتسجيل:</h3>
+            <ul id="courses-list"></ul>
+        </div>
+        
+        <button onclick="window.location.reload()" class="logout-btn">تسجيل الخروج</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
